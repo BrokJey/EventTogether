@@ -1,0 +1,249 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #f4f6f9;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+/* Навигация */
+header {
+    background: linear-gradient(45deg, #6c5ce7, #00b894);
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 30px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* Форма */
+form {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+input, select, button {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, button:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Профиль */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-header img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+}
+
+.profile-header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+/* Карточки мероприятий */
+.event-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 900px;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.event-card h3 {
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.event-card .event-details {
+    display: flex;
+    justify-content: space-between;
+    color: #7f8c8d;
+}
+
+.event-card .event-details span {
+    font-weight: bold;
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    color: #7f8c8d;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+    }
+
+    header nav a {
+        margin: 15px 0;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .event-card {
+        margin: 15px 0;
+    }
+}
